@@ -31,7 +31,7 @@ st.sidebar.date_input('Data Final')
 col1x,col2x,col3x,col4x,col5x = st.columns(5)
 
 with col1x:
-    st.metric('Valor Atul', '9,37','8,8')
+    st.metric('Valor Atual', '9,37','8,8')
 
 with col2x:
     st.metric('Min', '8,8')
