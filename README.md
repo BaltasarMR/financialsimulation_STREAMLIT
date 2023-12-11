@@ -2,6 +2,8 @@
 
 Template de dashboard de exemplo.
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://financialsimulationapp.streamlit.app)
+
 ## Instalação
 
 Certifique-se de ter o Python 3.11 e o pip instalados em seu sistema. Recomenda-se o uso de um ambiente virtual para isolar as dependências do projeto. Siga as etapas abaixo para configurar o ambiente e instalar os requisitos:
