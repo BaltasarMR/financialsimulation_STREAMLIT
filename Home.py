@@ -72,7 +72,7 @@ options = {
         {
             #"name": "访问来源",
             "type": "pie",
-            "radius": "50%",
+            "radius": "50%",  # Ajuste os valores de raio conforme necessário
             "data": [
                 {"value": 1048, "name": "Salário"},
                 {"value": 735, "name": "Luz"},
@@ -80,6 +80,10 @@ options = {
                 {"value": 484, "name": "Gasolina"},
                 {"value": 300, "name": "Saldo"},
             ],
+            "label": {
+                "show": True,
+                "formatter": "{b}: {c} ({d}%)",  # {b} representa o nome, {c} o valor, {d} a porcentagem
+            },            
             "emphasis": {
                 "itemStyle": {
                     "shadowBlur": 10,
@@ -92,7 +96,7 @@ options = {
 }
 
 
-col1,col2 = st.columns([1,2])
+col1,col2 = st.columns([3,3])
 
 with col1:
     st.info('**Controle de gastos**')   
