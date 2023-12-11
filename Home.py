@@ -14,7 +14,7 @@ st.set_page_config(
 )
 st.markdown(
     """ <style>
-#MainMenu {visibility: hidden;}
+MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
 </style> """,
     unsafe_allow_html=True,
@@ -99,10 +99,11 @@ options = {
 col1,col2 = st.columns([3,3])
 
 with col1:
-    st.info('**Controle de gastos**')   
-    st_echarts(
-    options=options, height="600px",
-    )
+    with st.container(border=True):
+        st.info('**Controle de gastos**')   
+        st_echarts(
+        options=options, height="500px",
+        )
 
 with col2:
     
@@ -110,16 +111,17 @@ with col2:
 
     valores_aleatorios = np.random.rand(22)
    
-    
-    st.info('**Fechamento de ações**')
-    option2 = {
-    "xAxis": {
+
+    with st.container(border=True):    
+        st.info('**Fechamento de ações**')
+        option2 = {
+        "xAxis": {
         "type": "category",
         "data": eval(sequencia.to_json(orient='records')[1:-1]),
-    },
-    "yAxis": {"type": "value"},
-    "series": [{"data": json.dumps(valores_aleatorios.tolist()), "type": "line"}],
-    }
-    st_echarts(
-    options=option2, height="500px",
-    )
+        },
+        "yAxis": {"type": "value"},
+        "series": [{"data": json.dumps(valores_aleatorios.tolist()), "type": "line"}],
+        }
+        st_echarts(
+        options=option2, height="500px",
+        )
